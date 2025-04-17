@@ -36,12 +36,16 @@ def fill_pm1_form(input_pdf_path, output_pdf_path):
     can = canvas.Canvas(packet, pagesize=A4)
 
     # วันที่ (แบบไทย)
-    today = datetime.datetime.now()
-    thai_date = f"{today.day}/{today.month}/{today.year + 543}"
+    
 
     # วาดข้อความเฉพาะหน้าแรก
-    draw_text(can, thai_date, 430, max_height-120)
-    draw_text(can, "นายสมชาย ใจดี", 430, max_height-140)
+    draw_text(can, "บ้านพักเด็กและครอบครัว", 435, max_height-112)
+    draw_text(can, "12", 391, max_height-131)
+    draw_text(can, "พฤศจิกายน", 440, max_height-131)
+    draw_text(can, "2566", 520, max_height-131)
+    draw_text(can, "นายสมชาย ใจดี", 220, max_height-148)
+    draw_text(can, "35", 435, max_height-148)
+    draw_text(can, "ไทย", 520, max_height-148)
 
     can.save()
     packet.seek(0)
