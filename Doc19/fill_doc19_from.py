@@ -18,10 +18,10 @@ def draw_text(can, text, x, y, font="THSarabun", size=16):
 # ดึง path ฟอนต์
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FONT_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "font"))
-input_pdf_path = os.path.join(BASE_DIR, "example.pdf")
+input_pdf_path = os.path.join(BASE_DIR, "พม.2.pdf")
 output_pdf_path = os.path.join(BASE_DIR, "output.pdf")
 
-def fill_pm2_form(input_pdf_path, output_pdf_path):
+def fill_doc19_form(input_pdf_path, output_pdf_path):
     try:
         pdfmetrics.registerFont(TTFont('THSarabun', os.path.join(FONT_DIR, 'THSarabunNew.ttf')))
         pdfmetrics.registerFont(TTFont('seguisym', os.path.join(FONT_DIR, 'seguisym.ttf')))
@@ -157,4 +157,4 @@ def fill_pm2_form(input_pdf_path, output_pdf_path):
         print("ไม่สามารถเขียนไฟล์ผลลัพธ์ได้ กรุณาตรวจสอบสิทธิ์การเขียน")
 
 # วิธีใช้งาน
-fill_pm2_form(input_pdf_path, output_pdf_path)
+fill_doc19_form(input_pdf_path, output_pdf_path)
